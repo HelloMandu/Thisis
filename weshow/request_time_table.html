@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        object = {
+            "lecture_list_result": [
+                {
+                    Lecture: {
+                        Department: "컴퓨터공학과",
+                        Grade: "1",
+                        Division: "전공선택",
+                        Class_num: "CSE105",
+                        Title: "C프로그래밍",
+                        Day_night: "주간",
+                        Unit: "3",
+                        Theory_training: "2.0/1.0",
+                        Professor: "양선",
+                        Department_limit: "Y",
+                        Seventyfive: "Y",
+                        Grade_limit: "",
+                        Teaching: "",
+                        Language: "",
+                        Virtual: null,
+                        Continuous_lecture: "",
+                        Closure_lecture: "",
+                        Remarks: "",
+                        Link: "",
+                        Time_List: [
+                            {
+                                Class: "01",
+                                Now_people: "6",
+                                People_limit: "",
+                                Time: [
+                                    {
+                                        Day: "월",
+                                        Start: 3,
+                                        End: 5,
+                                        Building: "S06-0604승학"
+                                    },
+                                    {
+                                        Day: "수",
+                                        Start: 18,
+                                        End: 20,
+                                        Building: "S06-0604승학"
+                                    }
+                                ]
+                            },
+                            {
+                                Class: "02",
+                                Now_people: "14",
+                                People_limit: "",
+                                Time: [
+                                    {
+                                        Day: "월",
+                                        Start: 6,
+                                        End: 8,
+                                        Building: "S06-0604승학"
+                                    },
+                                    {
+                                        Day: "수",
+                                        Start: 15,
+                                        End: 17,
+                                        Building: "S06-0604승학"
+                                    }
+                                ]
+                            },
+                            {
+                                Class: "03",
+                                Now_people: "22",
+                                People_limit: "",
+                                Time: [
+                                    {
+                                        Day: "월",
+                                        Start: 9,
+                                        End: 11,
+                                        Building: "S06-0604승학"
+                                    },
+                                    {
+                                        Day: "화",
+                                        Start: 18,
+                                        End: 20,
+                                        Building: "S06-0604승학"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        };
+        let xhttp = new XMLHttpRequest;
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(xhttp.responseText);
+            }
+        };
+        xhttp.open("POST", "https://dsisteam.com/thisis/weshow/get_selected_sugang_list.php", true);
+        xhttp.setRequestHeader('Content-Type', 'application/json'); // 컨텐츠타입을 json으로
+        xhttp.send(JSON.stringify(object)); // 데이터를 stringify해서 보냄xhttp.send();
+
+    </script>
+</body>
+
+</html>
