@@ -88,12 +88,35 @@ function findScheduleCases(&$result, &$schedules, &$selectedList, &$timeTable, $
   - 승학기숙사
   - 부민기숙사
   
+### Source
+```
+/*
+for($id = -1; $id < 7; $id++){//어제날짜부터~일주일
+    $day = date("Ymd",strtotime ($id." days"));
+    $html = file_get_html("http://www.donga.ac.kr/gzSub_007005005.aspx?DT=".$day);
+    $date = date("Y-m-d",strtotime($id." days"));
+}
+```
+  
 
 ## 전화번호부
   동아대학교 전화번호부정보 제공
 
 ### Screen Shots
 <p align="center"><img src="https://user-images.githubusercontent.com/45222982/93844006-c2d28980-fcd6-11ea-9cae-fc48a82e6582.png" width="280" height="500"/></p>
+
+### Source
+```
+/*
+switch($numberInfo[0]){
+  case "승학":
+    return $sql = "UPDATE call_number_sh SET organization = '{$numberInfo[1]}', office = '{$numberInfo[2]}', number = '{$numberInfo[3]}' WHERE id = ++$shId";
+  case "부민":
+    return $sql = "UPDATE call_number_bm SET organization = '{$numberInfo[1]}', office = '{$numberInfo[2]}', number = '{$numberInfo[3]}' WHERE id = ++$bmId";
+  case "구덕":
+    return $sql = "UPDATE call_number_gd SET organization = '{$numberInfo[1]}', office = '{$numberInfo[2]}', number = '{$numberInfo[3]}' WHERE id = ++$gdId";
+}
+```
 
 ## 학사일정
   동아대학교 학사일정정보 제공
