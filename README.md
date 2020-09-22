@@ -151,7 +151,7 @@ switch($numberInfo[0]){
 |2|2| 2020-08-24(월) ~ 08-27(목)|제2학기 등록|
 
 ## cron
- - 0 0,4,8,9,10,11,12,13,14,15,16,17,18,20 * * * php ~~.../cafeteriaUpdate.php
- - #0 0 1 * * php ~~.../Calendar_update.php
- - 0 0 1 * * php ~~.../CallNumberUpdate.php
+ - 0 0,4,8,9,10,11,12,13,14,15,16,17,18,20 * * * php ~~.../cafeteriaUpdate.php~~
+ - #0 0 1 * * php ~~.../Calendar_update.php~~
+ - 0 0 1 * * php ~~.../CallNumberUpdate.php~~
 
