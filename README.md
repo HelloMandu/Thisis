@@ -88,6 +88,13 @@ function findScheduleCases(&$result, &$schedules, &$selectedList, &$timeTable, $
   - 승학기숙사
   - 부민기숙사
   
+### Table
+
+| id | setMenu | oneMenu | snackMenu | date |
+|---|---|---|---|---|
+|1|보쌈정식|소고기덮밥|라면|2020-09-21|
+|2|제육정식|오리불고기덮밥|돈까스|2020-09-21|
+  
 ### Source
 ```
 /*
@@ -104,6 +111,18 @@ for($id = -1; $id < 7; $id++){//어제날짜부터~일주일
 
 ### Screen Shots
 <p align="center"><img src="https://user-images.githubusercontent.com/45222982/93844006-c2d28980-fcd6-11ea-9cae-fc48a82e6582.png" width="280" height="500"/></p>
+
+### List
+- 승학캠퍼스
+- 부민캠퍼스
+- 구덕캠퍼스
+
+### Table
+
+| id | organization | office | number |
+|---|---|---|---|
+|1|학사관리과|교육과정위원회|200-6124|
+|2|학생상담센터|사무실|200-6070|
 
 ### Source
 ```
@@ -123,3 +142,16 @@ switch($numberInfo[0]){
 
 ### Screen Shots
 <p align="center"><img src="https://user-images.githubusercontent.com/45222982/93844009-c2d28980-fcd6-11ea-823c-d59a4a09b6e6.png" width="280" height="500"/></p>
+
+### Table
+
+| id | semester | date | calendar |
+|---|---|---|---|
+|1|1| 2020-02-12(수) ~ 02-14(금)|제1학기 재학생 수강신청|
+|2|2| 2020-08-24(월) ~ 08-27(목)|제2학기 등록|
+
+## cron
+ - 0 0,4,8,9,10,11,12,13,14,15,16,17,18,20 * * * php ~~.../cafeteriaUpdate.php
+ - #0 0 1 * * php ~~.../Calendar_update.php
+ - 0 0 1 * * php ~~.../CallNumberUpdate.php
+
