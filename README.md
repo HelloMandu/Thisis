@@ -1,11 +1,9 @@
 <h1 align="center">	
 디스이즈 - 동아대학교 스마트 캠퍼스 어플리케이션</h1>
 
-<p align="center"><img src="https://www.pigno.se/static/assets/images/octocat.svg" width="240" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/45222982/93844186-4a1ffd00-fcd7-11ea-8c83-46bb66d1f8ab.png" width="240" /></p>
 
 <p align="center">Quick learn How to use the Git</p>
-
-<p align="center"><a href="https://www.pigno.se/barn/tutorial-git/docs" target="_blank">가이드 페이지에서 보기</a></p>
 
 ## :innocent: 바쁘잖아요 다들
 
