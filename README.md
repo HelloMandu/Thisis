@@ -7,20 +7,63 @@
 
 <p align="center"><a href="https://play.google.com/store/apps/details?id=kr.co.thisis.dsisproject&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img src="https://user-images.githubusercontent.com/45222982/93845190-e26bb100-fcda-11ea-9dd3-737ffb68223a.png" width="240" /></a><a href="https://apps.apple.com/kr/app/%EB%94%94%EC%8A%A4%EC%9D%B4%EC%A6%88/id1490702439?mt=8"><img src="https://user-images.githubusercontent.com/45222982/93845192-e39cde00-fcda-11ea-8d05-cf1e50243b3c.png" width="240" /></a></p>
 
-## :clap: 시작하며
+## 프로젝트 참가 이력
+- Thisis Backend
+  - WeShow
+  - 학식정보
+  - 전화번호부
+  - 학사일정
+ 
 
-### 깃을 왜 사용하죠?
+## Tech
+ - PHP
+ - MYSQL
+ - JSON
+ - simpledom
+ - crawling
+ - BackTraking Alr
 
-- 빠른 협업환경 조성
-- 누가, 언제, 무엇을, 왜, 어떻게 수정했는지 코드리뷰가 가능.
-- 이슈트래커 (Issue Tracker) 지원.
-- 깃헙 (GitHub)을 이용하여 자신의 git을 쉽게 공유 가능.
-- 지속적인 통합 (Continuous Integration) 지원.
-- Visual Studio, Jetbrains IntelliJ, Android Studio 등 대부분의 IDE에서 git 연동 제공.
 
-- **요약**: 협업을 위해서, 개발에서 사용, 두명 이상이 똑똑하게 소스를 공유하고 개발한 소스들을 합치세요!
+## WeShow
+ 시간표 경우의 수 자동생성 프로그램
 
-### 도대체 깃헙(GitHub)이 뭐야!?
+### Screen Shots
+
+### Function
+| Name | Param | Returns | Description |
+|---|---|---|---|
+| `findScheduleCases` | result / schedules / selectedList / timeTable / count | - | 선택된 시간표 정보를 통해 가능한 모든 시간표 경우의 수 추출 |
+| `canTakeit` | timeTable / $selectedList[$count] | boolean | 해당 시간에 이미 선택된 수업이 있는지 확인 |
+| `paintSchedule` | timeTable, schedules, selectedList[count][i] | - | 해당 수업을 시간표에 추가 |
+| `eraseSchedule` | timeTable, schedules, selectedList[count][i] | - | 새로운 경우의 수 추츨을 위해 수업 제거 |
+
+```
+/*선택된 시간표를 이용해 만들 수 있는 강의시간 경우의 수 추출*/
+function findScheduleCases(&$result, &$schedules, &$selectedList, &$timeTable, $count){
+    if($count == count($selectedList)){
+        printResult($schedules);
+        echo '<br>';
+        array_push($result, $schedules); //result push
+        return;
+    }
+    if(is_array($selectedList[$count])){
+        for($i = 0; $i < count($selectedList[$count]); $i++){
+            if(canTakeit($timeTable, $selectedList[$count][$i])){
+                paintSchedule($timeTable, $schedules, $selectedList[$count][$i]);
+                findScheduleCases($result, $schedules, $selectedList, $timeTable, $count + 1);
+                eraseSchedule($timeTable, $schedules, $selectedList[$count][$i]);
+            }
+        } 
+    }
+    else if(canTakeit($timeTable, $selectedList[$count])){
+        paintSchedule($timeTable, $schedules, $selectedList[$count]);
+        findScheduleCases($result, $schedules, $selectedList, $timeTable, $count + 1);
+        eraseSchedule($timeTable, $schedules, $selectedList[$count]);
+    }
+}
+```
+
+### 학식정보
 
 - 디자이너에게는 [Dribbble](https://dribbble.com/), 데이터사이언티스트에게는 [Kaggle](https://www.kaggle.com/)이 있듯이 개발자에게는 [깃헙 (Github)](https://github.com)이 있습니다.
 - 여러분이 퇴근길에 페이스북으로 글을 둘러보며 좋아요 하듯이 개발자들은 깃헙으로 [스타(star)](https://help.github.com/articles/about-stars/)를 날립니다.
@@ -28,7 +71,7 @@
 - 깃헙(Github)랑 깃(Git)은 다른 것입니다. 깃헙이 깃을 기반으로 온라인으로 서비스하는 형태입니다.
 - 쉽게 생각해서 Microsoft® Office를 Office 365로 서비스하는 것과 비슷하다 생각해주세요.
 
-### 깃이 어떤 역할을 하는건가요?
+### 전화번호부
 
 - 소스 병합 (merge, rebase)
 - 소스 리비전 관리 (reset, commit, branch)
@@ -36,7 +79,7 @@
 - 소스 태깅 (tag)
 - 소스 변경사항 검토 (diff, log)
 
-### 깃은 어디에서 지원하나요?
+### 학사일정
 
 - 윈도우즈 (Windows)
 - 맥 (OS X)
