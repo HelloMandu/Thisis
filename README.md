@@ -1,5 +1,4 @@
-<h1 align="center">	
-디스이즈 - 동아대학교 스마트 캠퍼스 애플리케이션</h1>
+<div align="center">#디스이즈 - 동아대학교 스마트 캠퍼스 애플리케이션</div>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/45222982/93844186-4a1ffd00-fcd7-11ea-8c83-46bb66d1f8ab.png" width="240" /></p>
 
