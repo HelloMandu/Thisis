@@ -5,6 +5,9 @@
 
 <p align="center">스마트한 동아인의 필수 App은 무엇? 바로 이것(This is)!</p>
 
+<p align="center"><img src="https://user-images.githubusercontent.com/45222982/93845190-e26bb100-fcda-11ea-9dd3-737ffb68223a.png" width="240" /></p><p align="center"><img src="https://user-images.githubusercontent.com/45222982/93845192-e39cde00-fcda-11ea-8d05-cf1e50243b3c.png" width="240" /></p>
+
+
 ## :innocent: 바쁘잖아요 다들
 
 - 읽는데 걸리는 예상시간 `15분`
