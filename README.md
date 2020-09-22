@@ -7,18 +7,6 @@
 
 <p align="center"><a href="https://play.google.com/store/apps/details?id=kr.co.thisis.dsisproject&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img src="https://user-images.githubusercontent.com/45222982/93845190-e26bb100-fcda-11ea-9dd3-737ffb68223a.png" width="240" /></a><a href="https://apps.apple.com/kr/app/%EB%94%94%EC%8A%A4%EC%9D%B4%EC%A6%88/id1490702439?mt=8"><img src="https://user-images.githubusercontent.com/45222982/93845192-e39cde00-fcda-11ea-8d05-cf1e50243b3c.png" width="240" /></a></p>
 
-
-## :innocent: 바쁘잖아요 다들
-
-- 읽는데 걸리는 예상시간 `15분`
-- 다 외우기 위하여 반복 학습이 필요한 횟수 `3번`
-
-## :flushed: 누가 읽어야 할까요
-
-- 개발 회사에 일하는 Git을 모르시는 개발자.
-- Git을 도입할지 망설이시는 관리자, 담당자.
-- 2명이상의 협업을 하는 스타트업 담당자, 인디 개발자는 도입을 고려해주세요.
-
 ## :clap: 시작하며
 
 ### 깃을 왜 사용하죠?
