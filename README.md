@@ -21,7 +21,7 @@
  - JSON
  - simpledom
  - crawling
- - BackTraking Alr
+ - BackTraking Algorithm
 
 
 ## WeShow
