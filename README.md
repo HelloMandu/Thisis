@@ -5,10 +5,6 @@
 
 <p align="center">스마트한 동아인의 필수 App은 무엇? 바로 이것(This is)!</p>
 
-
-[디스이즈 Android](https://play.google.com/store/apps/details?id=kr.co.thisis.dsisproject&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
-[디스이즈 IOS](https://apps.apple.com/kr/app/%EB%94%94%EC%8A%A4%EC%9D%B4%EC%A6%88/id1490702439?mt=8)
-
 ## :innocent: 바쁘잖아요 다들
 
 - 읽는데 걸리는 예상시간 `15분`
